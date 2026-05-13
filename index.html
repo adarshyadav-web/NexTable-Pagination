@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexTable | Advanced Pagination</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>User Management</h1>
+            <p>Managing 50 active users across the platform</p>
+        </header>
+
+        <div class="table-wrapper">
+            <table id="user-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <!-- Data will be injected here -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="pagination-container">
+            <div class="page-info">
+                Showing <span id="start-index">1</span> to <span id="end-index">10</span> of 50 users
+            </div>
+            <div class="pagination-btns" id="pagination">
+                <button class="prev-btn" id="prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                <div class="page-numbers" id="page-numbers">
+                    <!-- Page numbers will be injected here -->
+                </div>
+                <button class="next-btn" id="next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

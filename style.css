@@ -1,0 +1,120 @@
+:root {
+    --primary: #4a6cf7;
+    --bg: #f4f7ff;
+    --text: #2e2e2e;
+    --border: #e2e8f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    padding: 50px 20px;
+}
+
+.app-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+header {
+    margin-bottom: 40px;
+}
+
+header h1 { font-size: 2rem; margin-bottom: 10px; }
+header p { color: #777; }
+
+.table-wrapper {
+    overflow-x: auto;
+    margin-bottom: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th {
+    padding: 15px;
+    background-color: #f8f9fc;
+    border-bottom: 2px solid var(--border);
+    color: #555;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.95rem;
+}
+
+tr:hover { background-color: #fdfdfe; }
+
+.status-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.status-badge.active { background: #e6fffa; color: #38b2ac; }
+
+/* Pagination */
+.pagination-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.page-info { font-size: 0.9rem; color: #777; }
+
+.pagination-btns {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.page-numbers { display: flex; gap: 5px; }
+
+button {
+    width: 35px;
+    height: 35px;
+    border: 1px solid var(--border);
+    background: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button:hover:not(:disabled) {
+    background-color: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+button.active {
+    background-color: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
